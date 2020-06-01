@@ -1,3 +1,21 @@
 {
-  "nama":"Nicky Septiana Putri"
+  "personal-details":{
+    "nama-lengkap":"Nicky Septiana Putri",
+    "alamat":"Blitar"
+  },
+  "education-details":{
+    "sma":"kesamben"
+  },
+  "certificates":{
+    "sertifikat":"ini"
+  },
+  "job-experiences":{
+    "perawat":"2020 2024"
+  },
+  "skills":{
+    "tidur":"100%"
+  },
+  "personality":{
+    "gendut":"45kg"
+  }
 }
