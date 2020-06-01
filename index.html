@@ -13,7 +13,7 @@
   <script type="text/javascript">
     $(document).ready(function() {
       $.getJSON('data.json', function(data) {
-        $('#personal-details-nama-lengkap').text(data['personal-details'].nama-lengkap);
+        $('#personal-details-nama-lengkap').text(data.personal-details.nama-lengkap);
         console.log(data);
       });
     });
