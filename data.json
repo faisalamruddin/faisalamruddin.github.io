@@ -1,5 +1,40 @@
 {
   "personal_details":{
-    "nama_lengkap":"Nicky Septiana Putri"
+    "nama_lengkap":"Nicky Septiana Putri",
+    "alamat":"Blitar"
+  },
+  "education_details":[
+    {
+      "lembaga":"SMA Kesamben",
+      "tahun":"agustus 2016 - juni 2018",
+      "detail":"none"
+    },
+    {
+      "lembaga":"Universitas Jember",
+      "tahun":"agustus 2018 - juni 2022",
+      "detail":"Fakultas Ilmu Keperawatan"
+    }
+  ],
+  "certificates":[
+    {
+      "sertifikat":"ini sertifikat saya"
+    }
+  ],
+  "job_experiences":[
+    {
+      "pekerjaan":"perawat",
+      "lembaga":"RS Indonesia",
+      "tahun":"2022 2025"
+    }
+  ],
+  "skills":[
+    {
+      "keterampilan":"tidur",
+      "penguasaan":"80%",
+      "detail":"5 jam"
+    }
+  ],
+  "personality":{
+    "detail":"45kg"
   }
 }
