@@ -16,7 +16,9 @@
     },
   ],
   "certificates":[
-    "sertifikat":"ini sertifikat saya"
+    {
+      "sertifikat":"ini sertifikat saya"
+    }
   ],
   "job_experiences":[
     {
