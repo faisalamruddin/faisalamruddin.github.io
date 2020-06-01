@@ -5,7 +5,9 @@
   <link rel="shortcut icon" href="favicon.ico">
 </head>
 <body>
-
+  
+  <h1>Online CV</h1>
+  
   <div id="personal_details-nama_lengkap" style="font-size: 25px;"></div>
   
   <!-- <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script> -->
@@ -14,7 +16,6 @@
     $(document).ready(function() {
       $.getJSON('data.json', function(data) {
         //$('#personal_details-nama_lengkap').text(data['personal_details']['nama_lengkap']);
-        console.log('result');
         console.log(data);
       });
     });
