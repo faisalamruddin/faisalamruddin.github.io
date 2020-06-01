@@ -1,1 +1,1 @@
-my personal github pages
+personal resume
