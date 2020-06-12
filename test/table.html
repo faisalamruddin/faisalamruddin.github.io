@@ -34,7 +34,7 @@
   
   <script type="text/javascript">
     import firebase from 'init.js';
-    var database = myProject.database();
+    var database = firebase.database();
     var key = 1;
 
     database.ref('users').orderByKey().limitToLast(1).on('child_added',function(data) {
