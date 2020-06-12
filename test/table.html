@@ -35,34 +35,31 @@
   <script src="init.js" type="text/javascript"></script>
   <script type="text/javascript">
     var database = myFirebase.database();
-    var key = 1;
-
-    database.ref('users').orderByKey().limitToLast(1).on('child_added',function(data) {
-      key = parseInt(data.key, 10);
-      key = key + 1;
-      console.log(data);
+    
+    database.ref('users').on("value", function(snap) {
+      var count = 0;
+      if (snap.exists()) {
+        $('#table tbody').remove();
+        var tbody = '<tbody>';
+        snap.forEach(function(data){
+          count+=1;
+          var userId = data.key;
+          var value = data.val();
+          tbody += '<tr>';
+            tbody += '<td>' + value.username + '</td>';
+            tbody += '<td>' + value.password + '</td>';
+            tbody += '<td><button class="btn btn-info mx-2">Edit</button><button onclick="deleteById('+userId+')" class="btn btn-danger mx-2">Delete</button></td>';
+          tbody += '</tr>';
+        });
+        tbody += '</tbody>';
+        $('#table').append(tbody);
+      } else {
+        $('#table tbody').remove();
+      }
     });
 
-    $('#form').on('submit', function(event) {
-      event.preventDefault();
-      var userId = key;
-      var username = $('#username').val();
-      var password = $('#password').val();
-      writeUserData(userId, username, password);
-    });
-
-    function writeUserData(userId, username, password) {
-      database.ref('users/' + userId).set({
-        username: username,
-        password: password
-      }, function(error){
-        if (error) {
-          alert('error');
-        } else {
-          $('#username').val('');
-          $('#password').val('');
-        }
-      });
+    function deleteById(id) {
+      database.ref('users/' + id).remove();
     }
 
   </script>
