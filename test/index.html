@@ -42,7 +42,6 @@
     database.ref('users').orderByKey().limitToLast(1).on('child_added',function(data) {
       key = parseInt(data.key, 10);
       key = key + 1;
-      console.log(key);
     });
 
     $('#form').on('submit', function(event) {
