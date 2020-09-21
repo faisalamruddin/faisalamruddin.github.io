@@ -13,9 +13,21 @@
   <script type="text/javascript">
     $(document).ready(function() {
       console.log('getJson');
-      $.getJSON('data.json', function(data) {
-        console.log(typeof data);
+      $.ajax({
+        url: 'data.json',
+        type: 'GET',
+        dataType: 'json',
+      })
+      .done(function(data) {
         console.log(data);
+        console.log("success");
+      })
+      .fail(function(err) {
+        console.log(err);
+        console.log("error");
+      })
+      .always(function() {
+        console.log("complete");
       });
     });
   </script>
