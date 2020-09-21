@@ -1,26 +1,3 @@
 {
-  data: [
-    {
-      mata_kuliah: "Pemrograman Berbasis Framework",
-      kelas: [
-        {
-          nama: "A",
-          link: "https://www.google.com"
-        },
-        {
-          nama: "B",
-          link: "https://www.youtube.com"
-        },
-      ]
-    },
-    {
-      mata_kuliah: "Pemrograman Berbasis Mobile",
-      kelas: [
-        {
-          nama: "C",
-          link: "https://www.instagram.com"
-        }
-      ]
-    },
-  ]
+  "haha": "saya"
 }
