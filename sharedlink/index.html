@@ -13,6 +13,7 @@
   <script type="text/javascript">
     $(document).ready(function() {
       $.getJSON('./data.json', function(data) {
+        console.log(typeof data);
         if (data) {
           console.log(data);
         } else {
